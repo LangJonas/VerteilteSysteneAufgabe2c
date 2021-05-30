@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FriseurDatenbank</title>
+    <link rel="stylesheet" href="Aufgabe2cstyle.css" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="Aufgabe2cFetchScript.js"></script>
+
+    <!-- Erstellen einer rein kosmetischer Navba -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">  Menü</a>
+    </nav>
+
+</head>
+<!-- weil es so meiner Meinung nach schöner aussieht -->
+<br> <br><br><br><br>
+
+<main id="display-area">
+    <h1>Ausgabe</h1>
+    <!-- Hier wird das Ergebnis angezeigt -->
+
+
+</main>
+
+<button type="button" class="btn btn-primary btn-lg" id="Friseur">Friseur Anzeigen</button>
+<button type="button" class="btn btn-danger btn-lg" id="Kunde">Kunde Anzeigen</button>
+<body>
+
+
+<!-- Anwendung starten -->
+<script type="text/javascript">
+    //Fetchscript Objekt erstellen
+    let  fetchScript = new Aufgabe2cFetchScript();
+
+        fetchScript.fetchFriseure();
+
+    //verwenden einer selbstgeschreieben Sleep Funktion, damit die Anfrage nach dem Kunden nicht gesendet wird, bis ihre URL durch die Anfrage fetchFriseure nach dem HATEOS Prinzip bestimmt wurde
+    fetchScript.sleep(2000).then(() => {
+        fetchScript.fetchKunde();
+    })
+
+
+</script>
+</body>
+</html>

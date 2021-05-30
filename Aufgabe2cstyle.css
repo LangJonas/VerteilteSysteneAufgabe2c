@@ -1,0 +1,23 @@
+
+/* DEsign für den Hauptteil der Seite*/
+main{
+  /* Einfügen des Hintergrundbildes*/
+
+    background-image: url("holz.jpg");
+ background-repeat: no-repeat;
+  background-size: 100%;
+  /* Einfügen des Grauen schattens unter dem Bild*/
+    color:white;
+}
+
+
+/* DEsignfür den body der Seite*/
+body{
+  background-color: black;
+  /* Tischartiger Holzhintergrund für den nicht Spielbereich*/
+    background-image: url("hintergrund.jpg");
+      background-size: 100%;
+}
+
+
+
